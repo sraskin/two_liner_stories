@@ -18,9 +18,9 @@ namespace :scraper do
       rating = rating_text.gsub('Rating: ', '').gsub('/', '')
 
       begin
-        story = Story.where(story_id: story_id)
+        story = Story.where(post_id: story_id).first rescue nil
         unless story
-          story = Story.create(title: title, content: content, rating: rating.to_f, story_id: story_id)
+          story = Story.create(title: title, content: content, rating: rating.to_f, post_id: story_id)
         end
         puts "Story: #{story.id}"
       rescue
