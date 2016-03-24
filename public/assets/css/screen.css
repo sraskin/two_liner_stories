@@ -1,0 +1,1082 @@
+@import url(font-awesome.min.css);
+/* ==========================================================================
+   Table of Contents
+   ========================================================================== */
+/*
+
+    1.  Fonts
+    2.  General
+    3.  Utilities
+    4.  General
+    5.  Single Post
+    6.  Embeds from other services
+    7.  Pagination
+    8.  Footer
+    9.  jQuery.Sidr restyling - Menu for mobile devices
+    10. Error page
+    11-12.  Media Queries (Tablet)
+    13.     Media Queries (Mobile)
+
+ */
+/* ==========================================================================
+   1. Fonts
+   ========================================================================== */
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/oswald.regular.eot");
+  src: url("../fonts/oswald.regulard41d.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald.regular.woff") format("woff"), url("../fonts/oswald.regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/oswald.bold.eot");
+  src: url("../fonts/oswald.boldd41d.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald.bold.woff") format("woff"), url("../fonts/oswald.bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/oswald.light.eot");
+  src: url("../fonts/oswald.lightd41d.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald.light.woff") format("woff"), url("../fonts/oswald.light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotobold';
+  src: url("../fonts/roboto-bold.eot");
+  src: url("../fonts/roboto-boldd41d.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-bold.woff") format("woff"), url("../fonts/roboto-bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto_medium';
+  src: url("../fonts/roboto-medium.eot");
+  src: url("../fonts/roboto-mediumd41d.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-medium.woff") format("woff"), url("../fonts/roboto-medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotoregular';
+  src: url("../fonts/roboto-regular.eot");
+  src: url("../fonts/roboto-regulard41d.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-regular.woff") format("woff"), url("../fonts/roboto-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto_slabbold';
+  src: url("../fonts/robotoslab-bold.eot");
+  src: url("../fonts/robotoslab-boldd41d.eot?#iefix") format("embedded-opentype"), url("../fonts/robotoslab-bold.woff") format("woff"), url("../fonts/robotoslab-bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto_slabregular';
+  src: url("../fonts/robotoslab-regular.eot");
+  src: url("../fonts/robotoslab-regulard41d.eot?#iefix") format("embedded-opentype"), url("../fonts/robotoslab-regular.woff") format("woff"), url("../fonts/robotoslab-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+/* ==========================================================================
+   2. General - Setting up some base styles
+   ========================================================================== */
+html {
+  height: 100% !important;
+  max-height: 100%;
+  font-size: 62.5%; }
+
+body {
+  height: 100%;
+  max-height: 100%;
+  font-family: 'robotoregular', serif;
+  font-size: 2.0rem;
+  line-height: 1.6em;
+  color: #333; }
+
+::-moz-selection {
+  color: #222;
+  background: #D6EDFF;
+  text-shadow: none; }
+
+::selection {
+  color: #222;
+  background: #D6EDFF;
+  text-shadow: none; }
+
+h1, h2, h3,
+h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+  font-family: 'roboto_slabbold', sans-serif; }
+
+h1 {
+  font-size: 5rem;
+  line-height: 1.2em;
+  letter-spacing: -2px;
+  text-indent: -3px; }
+
+h2 {
+  font-size: 4rem;
+  line-height: 1.1em;
+  letter-spacing: -1px;
+  text-indent: -2px; }
+
+h3 {
+  font-size: 3.5rem; }
+
+h4 {
+  font-size: 3rem; }
+
+h5 {
+  font-size: 2.5rem; }
+
+h6 {
+  font-size: 2rem; }
+
+a {
+  color: #404040;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease; }
+
+a:hover {
+  color: #6dbcdb; }
+
+h1 a, h2 a, h3 a,
+h4 a, h5 a, h6 a {
+  color: #2c3e50; }
+
+p, ul, ol {
+  margin: 0.6em 0; }
+
+ol ol, ul ul,
+ul ol, ol ul {
+  margin: 0.4em 0; }
+
+strong {
+  font-family: "roboto_slabbold"; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 5px solid #f2f2f2;
+  margin: 1em 0 3em;
+  padding: 0; }
+
+blockquote {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.1em 2em;
+  background-color: #6dbcdb;
+  color: #fff;
+  font-weight: normal; }
+  blockquote p {
+    margin: 0.8em 0;
+    font-style: italic;
+    font-size: 1.8rem; }
+  blockquote small {
+    display: inline-block;
+    margin: 0.8em 0 0.8em 1.5em;
+    font-size: 0.9em;
+    color: #fff; }
+    blockquote small:before {
+      content: '\2014 \00A0'; }
+  blockquote cite {
+    font-weight: bold; }
+    blockquote cite a {
+      font-weight: normal; }
+
+dl {
+  margin: 1.6em 0; }
+  dl dt {
+    float: left;
+    width: 180px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+    margin-bottom: 1em; }
+  dl dd {
+    margin-left: 200px;
+    margin-bottom: 1em; }
+
+mark {
+  background-color: #ffc336; }
+
+code, tt {
+  padding: 1px 3px;
+  font-family: Inconsolata, monospace, sans-serif;
+  font-size: 0.85em;
+  white-space: pre;
+  border: 1px solid #E3EDF3;
+  background: #F7FAFB;
+  border-radius: 2px; }
+
+pre {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1.6em 0;
+  border: 1px solid #E3EDF3;
+  width: 100%;
+  padding: 12px 12px 12px 2em;
+  font-family: Inconsolata, monospace, sans-serif;
+  font-size: 0.9em;
+  white-space: pre;
+  overflow: auto;
+  background: #F7FAFB;
+  border-radius: 3px; }
+
+pre code, tt {
+  font-size: inherit;
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+  background: transparent;
+  border: none;
+  padding: 0; }
+
+kbd {
+  display: inline-block;
+  margin-bottom: 0.4em;
+  padding: 1px 8px;
+  border: #ccc 1px solid;
+  color: #666;
+  text-shadow: #fff 0 1px 0;
+  font-size: 0.9em;
+  font-weight: bold;
+  background: #f4f4f4;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 white inset; }
+
+table {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1.6em 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent; }
+  table table table {
+    background-color: #fff; }
+  table caption + thead tr:first-child th,
+  table caption + thead tr:first-child td,
+  table colgroup + thead tr:first-child th,
+  table colgroup + thead tr:first-child td,
+  table thead:first-child tr:first-child th,
+  table thead:first-child tr:first-child td {
+    border-top: 0; }
+  table th,
+  table td {
+    padding: 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #efefef; }
+  table th {
+    color: #000; }
+  table tbody + tbody {
+    border-top: 2px solid #efefef; }
+  table tbody > tr:nth-child(odd) > td, table tbody > tr:nth-child(odd) > th {
+    background-color: #f6f6f6; }
+  table.plain tbody > tr:nth-child(odd) > td,
+  table.plain tbody > tr:nth-child(odd) > th {
+    background: transparent; }
+
+.content > .panel {
+  height: 26px;
+  background: #f2f2f2; }
+
+/* ==========================================================================
+   3. Utilities
+   ========================================================================== */
+/* Hides the element */
+.hidden {
+  text-indent: -9999px;
+  visibility: hidden;
+  display: none; }
+
+/* Creates a responsive wrapper that makes our content scale nicely */
+.inner, .comments > * {
+  position: relative;
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto; }
+
+/* Centres vertically */
+.vertical {
+  display: table-cell;
+  vertical-align: middle; }
+
+/* ==========================================================================
+   4. General - The main styles for the the theme
+   ========================================================================== */
+a.toggle-mobile-menu {
+  display: none;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  z-index: 10;
+  color: #fff;
+  font-size: 30px; }
+
+.menu_top {
+  border-top: 1px solid #8ac9e2;
+  border-bottom: 1px solid #60aecf;
+  width: 100%;
+  line-height: 76px;
+  font-size: 19px;
+  text-align: center;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+  background: #6dbcdb; }
+  .menu_top ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    cursor: default; }
+    .menu_top ul li {
+      display: inline-block; }
+      .menu_top ul li a {
+        display: inline-block;
+        padding: 0 17px;
+        height: 100%;
+        color: #fff;
+        text-decoration: none;
+        opacity: 0.5;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        cursor: pointer; }
+        .menu_top ul li a.active, .menu_top ul li a:hover {
+          opacity: 1; }
+
+/* Big cover image container on the home page */
+#site-head {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  text-align: center;
+  color: #fff;
+  /* default cover image, is displayed when the cover is not specified in the admin panel */
+  background: #303538 url("../img/superb_cover.jpg") no-repeat center center;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  padding-bottom: 0;
+  overflow: hidden; }
+  #site-head .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3); }
+  #site-head .header__inner {
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-height: 295px; }
+  #site-head .social-panel {
+    height: 78px; }
+    #site-head .social-panel .buttons {
+      margin: 0;
+      text-align: center;
+      line-height: 78px; }
+      #site-head .social-panel .buttons .btn {
+        line-height: 100%;
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        opacity: 0.65;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+        #site-head .social-panel .buttons .btn:hover {
+          opacity: 1; }
+        #site-head .social-panel .buttons .btn + .btn {
+          margin-left: 20px; }
+        #site-head .social-panel .buttons .btn img {
+          vertical-align: middle; }
+
+/* Blog-logo. Upload one in ghost/settings/ */
+#blog-logo {
+  display: inline-block;
+  position: relative;
+  bottom: -5px; }
+  #blog-logo.default {
+    display: inline-block;
+    width: 92px;
+    height: 78px;
+    /* default logo, is displayed when the logo is not specified in the admin panel */
+    background: url("../img/superb_logo.svg") 0 0 no-repeat; }
+  #blog-logo img {
+    display: block;
+    max-width: 100%;
+    max-height: 100px;
+    width: auto;
+    margin: 0 auto;
+    line-height: 0; }
+
+/* The details of your blog. Defined in ghost/settings/ */
+.blog-title {
+  margin: 0 0 10px 0;
+  font-size: 6rem;
+  letter-spacing: -1px;
+  font-family: "roboto_slabbold";
+  font-weight: normal;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.15); }
+  .blog-title > a {
+    text-decoration: none;
+    color: #fff; }
+
+.blog-description {
+  margin: 0;
+  font-size: 2.4rem;
+  line-height: 1.5em;
+  font-weight: 300;
+  font-family: 'roboto_medium', serif;
+  letter-spacing: 0;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.15); }
+
+#back {
+  color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  padding: 6px;
+  font-size: 16px; }
+
+/* Every post, on every page, gets this style on its <article> tag */
+.post {
+  border-top: 1px solid #d7dadb; }
+  .post .post-inner {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 5rem 0 1.8rem 0;
+    word-break: break-word;
+    hyphens: auto; }
+  .post.even {
+    background: #f2f2f2;
+    border-top: 1px solid #d7dadb; }
+    .post.even .post-meta {
+      border-color: #e6e6e6; }
+
+.post-title {
+  margin: 0;
+  font-weight: normal;
+  text-align: center;
+  color: #2c3e50; }
+  .post-title:after {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTAwcHgiIGhlaWdodD0iMTYuNjY3cHgiIHZpZXdCb3g9IjAgMCAxMDAgMTYuNjY3IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTYuNjY3IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxyZWN0IGZpbGw9IiM2RUJDREIiIHdpZHRoPSIxMDAiIGhlaWdodD0iNC45NzkiLz4NCgk8cG9seWdvbiBmaWxsPSIjRUY0NzREIiBwb2ludHM9IjU0Ljk2OSwxNi42NjcgNTAsMTEuNjY3IDQ1LjAzMSwxNi42NjcgNDUuMDMxLDAgNTQuOTY5LDAgCSIvPg0KPC9nPg0KPC9zdmc+DQo=);
+    content: " ";
+    width: 100px;
+    height: 16px;
+    display: block;
+    margin: 18px auto 10px auto; }
+  .post-title a {
+    font-family: "roboto_slabbold";
+    font-size: 4.2rem;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: #2c3e50; }
+    .post-title a:hover {
+      color: #fc4349; }
+
+.post-excerpt p {
+  margin: 1.6rem 0 0 0;
+  font-size: 0.9em;
+  line-height: 1.6em;
+  font-family: "robotoregular"; }
+  .post-excerpt p:last-child {
+    margin-top: 0.5rem; }
+
+.post-meta {
+  display: block;
+  margin: 17px 0 5px 0;
+  padding-top: 17px;
+  border-top: #f2f2f2 5px solid;
+  font-family: 'robotoregular', sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #a2a2a2; }
+  .post-meta > * {
+    display: inline-block; }
+    .post-meta > * + * {
+      margin-left: 50px; }
+  .post-meta i {
+    margin-right: 5px; }
+  .post-meta a {
+    color: #9EABB3;
+    text-decoration: none; }
+    .post-meta a:hover {
+      text-decoration: underline; }
+
+.user-meta {
+  position: relative;
+  padding: 0.3rem 40px 0 100px;
+  min-height: 77px; }
+
+.user-image {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.user-name {
+  display: block;
+  font-weight: bold; }
+
+.user-bio {
+  display: block;
+  max-width: 440px;
+  font-size: 1.4rem;
+  line-height: 1.5em; }
+
+.publish-meta {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4.3rem 0 4rem 0;
+  text-align: right; }
+
+.publish-heading {
+  display: block;
+  font-weight: bold; }
+
+.publish-date {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.5em; }
+
+/* ==========================================================================
+   5. Single Post - When you click on an individual post
+   ========================================================================== */
+.post-template .content > .panel {
+  height: 26px;
+  background: #f2f2f2;
+  border-bottom: 1px solid #d7dadb; }
+.post-template .post {
+  margin-top: 0;
+  border-top: none;
+  border-bottom: none;
+  padding-bottom: 0;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  /* Keep large images within the bounds of the post-width */ }
+  .post-template .post .post-header {
+    padding: 60px 0; }
+  .post-template .post .post-meta {
+    margin-top: 0;
+    padding: 6px 0 8px 0;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #d7dadb;
+    font-size: 1.6rem;
+    text-align: left; }
+    .post-template .post .post-meta.bottom {
+      padding: 20px 0;
+      background-color: #fff;
+      border-bottom: none;
+      text-align: center; }
+    .post-template .post .post-meta .inner, .post-template .post .post-meta .comments > * {
+      display: block; }
+      .post-template .post .post-meta .inner > *, .post-template .post .post-meta .comments > * > * {
+        display: inline-block; }
+        .post-template .post .post-meta .inner > * + *, .post-template .post .post-meta .comments > * > * + * {
+          margin-left: 50px; }
+  .post-template .post .post-content img {
+    display: block;
+    max-width: 100%;
+    margin: 20px auto; }
+  .post-template .post .post-content h1 {
+    font-size: 5rem;
+    font-weight: normal; }
+  .post-template .post h2, .post-template .post h3, .post-template .post h4, .post-template .post h5, .post-template .post h6 {
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .post-template .post h2 {
+    margin-top: 50px;
+    font-size: 2.8rem;
+    color: #2c3e50; }
+  .post-template .post h3 {
+    margin-top: 50px;
+    font-size: 2.2rem;
+    color: #6dbcdb; }
+  .post-template .post h4 {
+    margin-top: 35px;
+    font-size: 1.8rem;
+    color: #6dbcdb; }
+  .post-template .post h5 {
+    margin-top: 30px;
+    font-size: 1.7rem;
+    color: #a2a2a2; }
+  .post-template .post h6 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #a2a2a2; }
+  .post-template .post ul ul {
+    list-style: none; }
+  .post-template .post a {
+    font-family: "roboto_medium";
+    color: #60aecf !important; }
+  .post-template .post input[type="text"] {
+    border-radius: 4px;
+    border: 1px solid #6dbcdb;
+    padding: 0.4em 2em;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+.post-template .to_top {
+  border-top: 1px solid #60aecf;
+  border-bottom: 1px solid #8ac9e2;
+  padding: 25px 0;
+  background-color: #6dbcdb;
+  text-align: center; }
+  .post-template .to_top a {
+    font-size: 30px;
+    color: #fff !important;
+    opacity: 0.7;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .post-template .to_top a:hover {
+      opacity: 1; }
+
+/* The author credit area after the post */
+.post-footer {
+  position: relative;
+  margin: 4rem 0 0 0;
+  padding: 0;
+  /* share links */ }
+  .post-footer h4 {
+    font-size: 1.8rem;
+    margin: 0; }
+  .post-footer p {
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    line-height: 1.6em; }
+  .post-footer .author {
+    padding: 30px 0 30px 0;
+    text-align: center;
+    border-top: 1px solid #d7dadb;
+    background-color: #f2f2f2;
+    overflow: hidden; }
+    .post-footer .author img {
+      display: inline-block;
+      border-radius: 58px;
+      border: 3px solid #fff;
+      height: 110px; }
+    .post-footer .author h4 {
+      margin: 12px 0;
+      font-size: 2.2rem;
+      color: #2c3e50;
+      font-weight: normal; }
+    .post-footer .author p {
+      color: #6dbcdb;
+      font-size: 1.6rem;
+      font-style: italic; }
+  .post-footer .share {
+    display: block;
+    border-top: 1px solid #d7dadb;
+    background-color: #f2f2f2;
+    text-align: center;
+    line-height: 78px;
+    color: #a2a2a2; }
+    .post-footer .share span {
+      display: inline-block;
+      margin-right: 15px; }
+    .post-footer .share a {
+      font-size: 1.5rem;
+      display: inline-block;
+      margin: 0 0 0 0.2rem;
+      color: #a2a2a2 !important;
+      line-height: 1; }
+      .post-footer .share a i {
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+      .post-footer .share a:hover i {
+        color: #627199 !important;
+        border-color: #627199; }
+        .post-footer .share a:hover i.fa-facebook {
+          color: #3B5998 !important;
+          border-color: #3B5998 !important; }
+        .post-footer .share a:hover i.fa-google-plus {
+          color: #d44132 !important;
+          border-color: #d44132 !important; }
+        .post-footer .share a:hover i.fa-twitter {
+          color: #34ccfe !important;
+          border-color: #34ccfe !important; }
+      .post-footer .share a i {
+        border-radius: 13px;
+        border: 1px solid #a2a2a2;
+        width: 24px;
+        height: 24px;
+        line-height: 24px; }
+
+/* ==========================================================================
+   6. Embeds from other services
+   ========================================================================== */
+.comments {
+  border-top: 1px solid #d7dadb;
+  background-color: #f2f2f2; }
+  .comments > * {
+    padding: 30px 0 30px 0; }
+    .comments > *.fb-comments {
+      display: block !important; }
+      .comments > *.fb-comments span {
+        width: 100% !important; }
+        .comments > *.fb-comments span iframe {
+          width: 100% !important; }
+
+.page .comments {
+  display: none; }
+
+/* Github */
+.gist table {
+  margin: 0;
+  font-size: 1.4rem; }
+
+.gist .line-number {
+  min-width: 25px;
+  font-size: 1.1rem; }
+
+/* Video players */
+.post-template iframe {
+  width: 100%; }
+
+/* Google Maps wrapper */
+/* ==========================================================================
+   7. Pagination - Tools to let you flick between pages
+   ========================================================================== */
+/* The main wrapper for our pagination links */
+.pagination-wrapper {
+  border-top: 1px solid #60aecf;
+  border-bottom: 1px solid #8ac9e2;
+  background-color: #6dbcdb;
+  line-height: 3.7em; }
+  .pagination-wrapper .pagination {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    text-align: center;
+    /* Push the previous/next links out to the left/right */ }
+    .pagination-wrapper .pagination a {
+      font-family: "robotoregular", sans-serif;
+      color: #fff; }
+    .pagination-wrapper .pagination .older-posts,
+    .pagination-wrapper .pagination .newer-posts {
+      position: absolute;
+      display: inline-block;
+      padding: 0 15px;
+      text-decoration: none; }
+    .pagination-wrapper .pagination .older-posts {
+      right: 0; }
+    .pagination-wrapper .pagination .page-number {
+      display: inline-block;
+      font-family: "robotoregular", sans-serif;
+      padding: 2px 0; }
+    .pagination-wrapper .pagination .newer-posts {
+      left: 0; }
+
+/* ==========================================================================
+   8. Footer - The bottom of every page
+   ========================================================================== */
+.site-footer {
+  position: relative;
+  margin: 0;
+  padding: 4rem 0 3.5rem 0;
+  font-family: 'roboto_slabregular', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.7em;
+  color: #6dbcdb;
+  text-align: center;
+  background: #2c3e50; }
+  .site-footer a {
+    color: #BBC7CC;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .site-footer a:hover {
+      color: #fff; }
+  .site-footer .copyright {
+    font-family: "roboto_slabregular";
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: #6dbcdb; }
+    .site-footer .copyright em {
+      font-style: normal;
+      color: #fff; }
+
+.poweredby .icon-ghost {
+  font-weight: 700;
+  text-decoration: none; }
+  .poweredby .icon-ghost:hover {
+    text-decoration: none; }
+  .poweredby .icon-ghost:before {
+    font-size: 1rem;
+    margin-right: 0.2em; }
+
+/* The subscribe link on the footer */
+.subscribe {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-family: "roboto_slabregular";
+  font-weight: 300;
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 2.4rem;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #6dbcdb !important; }
+  .subscribe:hover {
+    color: #fff !important; }
+
+/* ==========================================================================
+   9.jQuery.Sidr restyling - Menu for mobile devices
+   ========================================================================== */
+.sidr {
+  width: 200px;
+  background: #6dbcdb;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
+  .sidr ul {
+    border: none; }
+    .sidr ul li {
+      border-top: none;
+      border-bottom-color: #8ac9e2; }
+      .sidr ul li a {
+        color: #fff;
+        opacity: 0.5;
+        text-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+      .sidr ul li:hover, .sidr ul li.active {
+        line-height: 48px; }
+        .sidr ul li:hover a, .sidr ul li.active a {
+          opacity: 1;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none; }
+
+/* ==========================================================================
+   10. Error page
+   ========================================================================== */
+.error-page .error-message {
+  padding: 30px 0 40px 0; }
+  .error-page .error-message .error-code {
+    font-size: 10.8rem; }
+  .error-page .error-message .error-description {
+    font-size: 23px;
+    text-align: center; }
+.error-page .site-footer:before {
+  content: "\f085";
+  position: absolute;
+  font-size: 32rem;
+  font-family: FontAwesome;
+  opacity: 0.1;
+  color: #CCC;
+  z-index: -1;
+  top: -55%;
+  right: 30px; }
+
+/* ==========================================================================
+   11. Media Queries - Smaller than 900px
+   ========================================================================== */
+@media only screen and (max-width: 900px) {
+  blockquote {
+    margin-left: 0; }
+
+  #site-head {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: auto;
+    min-height: 295px;
+    padding: 15% 0 85px 0; }
+    #site-head .social-panel {
+      height: 50px; }
+      #site-head .social-panel .buttons {
+        line-height: 50px; }
+        #site-head .social-panel .buttons .btn + .btn {
+          margin-left: 16px; }
+
+  .blog-title {
+    font-size: 4rem;
+    letter-spacing: -1px; }
+
+  .blog-description {
+    font-size: 1.7rem;
+    line-height: 1.5em; }
+
+  .post {
+    font-size: 0.9em;
+    line-height: 1.6em; }
+
+  .post-template .post-header {
+    padding: 40px 0; }
+
+  h1 {
+    font-size: 4.8rem;
+    text-indent: -2px; }
+
+  h2 {
+    font-size: 3.8rem; }
+
+  h3 {
+    font-size: 3.3rem; }
+
+  h4 {
+    font-size: 2.8rem; } }
+/* ==========================================================================
+   12. Media Queries - Smaller than 767px
+   ========================================================================== */
+@media only screen and (max-width: 767px) {
+  a.toggle-mobile-menu {
+    display: block; }
+
+  .menu_top {
+    display: none; } }
+/* ==========================================================================
+   13. Media Queries - Smaller than 500px
+   ========================================================================== */
+@media only screen and (max-width: 500px) {
+  blockquote {
+    padding: 0.1em 0.5em; }
+
+  pre {
+    padding-left: 0.5em; }
+
+  #blog-logo.default, #blog-logo img {
+    max-height: 80px; }
+  #blog-logo.default {
+    background-size: contain; }
+
+  .pagination-wrapper {
+    line-height: 1.3em;
+    padding: 20px 0; }
+    .pagination-wrapper .pagination .page-number {
+      display: block; }
+    .pagination-wrapper .pagination .older-posts,
+    .pagination-wrapper .pagination .newer-posts {
+      position: static;
+      margin: 10px 0; }
+
+  .post {
+    width: auto;
+    font-size: 0.8em;
+    line-height: 1.6em; }
+    .post .post-inner {
+      padding-bottom: 2rem;
+      width: 90%; }
+
+  #site-head {
+    padding: 5% 0 55px 0; }
+    #site-head .social-panel {
+      height: 50px; }
+      #site-head .social-panel .buttons {
+        line-height: 50px; }
+        #site-head .social-panel .buttons .btn + .btn {
+          margin-left: 16px; }
+
+  .blog-title {
+    font-size: 3rem; }
+
+  .blog-description {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.5rem; }
+
+  h1, h2 {
+    font-size: 3rem;
+    line-height: 1.1em;
+    letter-spacing: -1px; }
+    h1.post-title a, h2.post-title a {
+      font-size: 3rem; }
+
+  h3 {
+    font-size: 2.8rem; }
+
+  h4 {
+    font-size: 2.3rem; }
+
+  .post-template #site-head .header__inner .vertical {
+    padding-top: 5%;
+    padding-bottom: 5%; }
+  .post-template .post-header {
+    padding: 30px 0; }
+  .post-template .post {
+    padding-bottom: 0; }
+    .post-template .post .post-meta {
+      font-size: 1.3rem; }
+      .post-template .post .post-meta > * {
+        margin: 0 auto; }
+
+  .post-meta {
+    font-size: 1.3rem;
+    text-align: center !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important; }
+    .post-meta > * {
+      line-height: 1.2;
+      margin: 0 10px; }
+
+  .post-footer {
+    padding: 0;
+    text-align: center; }
+    .post-footer .author {
+      margin: 0;
+      padding: 1.6em 0 1.6rem 0;
+      border-bottom: #EBF2F6 1px dashed; }
+    .post-footer .share {
+      position: static;
+      width: auto; }
+
+  .site-footer {
+    font-size: 1.1rem; }
+    .site-footer .subscribe,
+    .site-footer .copyright {
+      font-size: 1.4rem; }
+
+  /* Video players */
+  .post-template iframe[allowfullscreen] {
+    height: 240px; } }
+@media only screen and (max-height: 500px) {
+  #site-head {
+    min-height: 295px; } }
+/* ==========================================================================
+   End of file. Media queries should be the last thing here. Do not add stuff
+   below this point.
+   ========================================================================== */

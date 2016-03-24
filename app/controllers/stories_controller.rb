@@ -4,7 +4,7 @@ class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.json
   def index
-    @stories = Story.all.page(params[:page]).per(1)
+    @stories = Story.all.page(params[:page]).per(10)
   end
 
   # GET /stories/1
