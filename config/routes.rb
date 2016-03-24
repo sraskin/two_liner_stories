@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'stories#index'
   resources :stories
   get '/random', to: 'stories#random'
 

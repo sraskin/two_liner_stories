@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bfb13da6-78a6-4219-b6b9-be3f3ba10878" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
     </list>
     <ignored path="two_liner_scraper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="production.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="production.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8385093">
-              <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -75,6 +75,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.027950311">
+              <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="GeneratorOptions">
@@ -88,7 +98,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/models/story.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/lib/tasks/scraper.rake" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -97,6 +106,7 @@
         <option value="$PROJECT_DIR$/app/views/stories/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
       </list>
     </option>
   </component>
@@ -336,7 +346,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="SearchEverywhereHistoryKey" value="prod&#9;FILE&#9;file:///home/sraskin/RailsProjects/two_liner_scraper/config/environments/production.rb&#10;gem&#9;FILE&#9;file:///Users/irfanahmed/RailsProject/two_liner_scraper/Gemfile&#10;route&#9;FILE&#9;file:///Users/irfanahmed/RailsProject/two_liner_scraper/config/routes.rb&#10;str&#9;FILE&#9;file:///Users/irfanahmed/RailsProject/two_liner_scraper/app/controllers/stories_controller.rb&#10;data&#9;FILE&#9;file:///Users/irfanahmed/RailsProject/two_liner_scraper/config/database.yml" />
+    <property name="SearchEverywhereHistoryKey" value="rou&#9;FILE&#9;file:///home/sraskin/RailsProjects/two_liner_scraper/config/routes.rb&#10;prod&#9;FILE&#9;file:///home/sraskin/RailsProjects/two_liner_scraper/config/environments/production.rb&#10;gem&#9;FILE&#9;file:///Users/irfanahmed/RailsProject/two_liner_scraper/Gemfile&#10;route&#9;FILE&#9;file:///Users/irfanahmed/RailsProject/two_liner_scraper/config/routes.rb&#10;str&#9;FILE&#9;file:///Users/irfanahmed/RailsProject/two_liner_scraper/app/controllers/stories_controller.rb&#10;data&#9;FILE&#9;file:///Users/irfanahmed/RailsProject/two_liner_scraper/config/database.yml" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
@@ -732,14 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08530806">
-          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/story.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9810427">
@@ -829,8 +831,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8385093">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.027950311">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
           <folding />
         </state>
       </provider>
