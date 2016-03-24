@@ -1,19 +1,26 @@
-<p id="notice"><%= notice %></p>
+<main class="content" role="main" xmlns="http://www.w3.org/1999/html">
+  <div class="panel">
 
-<p>
-  <strong>Title:</strong>
-  <%= @story.title %>
-</p>
+  </div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @story.content %>
-</p>
+  <article class="post tag-superb tag-about-theme tag-information odd">
+    <div class="post-inner">
+      <header class="post-header">
+        <h2 class="post-title"><%= @story.title %></h2>
+      </header>
 
-<p>
-  <strong>Rating:</strong>
-  <%= @story.rating %>
-</p>
+      <section class="post-excerpt">
+        <p><%= @story.content %></p>
+      </section>
 
-<%= link_to 'Edit', edit_story_path(@story) %> |
-<%= link_to 'Back', stories_path %>
+					<span class="post-meta">
+						<span></span>
+						<span>
+              <div class="fb-share-button" data-href="https://twolinestories.herokuapp.com/stories/<%= @story.id %>" data-layout="button"></div>
+              <div><%= link_to "Back", root_path %></div>
+            </span>
+						<span></span>
+					</span>
+    </div>
+  </article>
+</main>

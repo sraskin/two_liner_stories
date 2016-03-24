@@ -6,23 +6,25 @@
     </nav>
   </div>
   <% @stories.each do |story| %>
-      <article class="post tag-superb tag-about-theme tag-information odd">
-        <div class="post-inner">
-          <header class="post-header">
-            <h2 class="post-title"><%= story.title %></h2>
-          </header>
+      <a href="<%= (url_for [story]) %>" style="text-decoration:none">
+        <article class="post tag-superb tag-about-theme tag-information odd">
+          <div class="post-inner">
+            <header class="post-header">
+              <h2 class="post-title"><%= story.title %></h2>
+            </header>
 
-          <section class="post-excerpt">
-            <p><%= story.content %></p>
-          </section>
+            <section class="post-excerpt">
+              <p><%= truncate(story.content, length: 80) %></p>
+            </section>
 
 					<span class="post-meta">
 						<span></span>
 						<span><%= story.rating %>&nbspout of 10</span>
 						<span></span>
 					</span>
-        </div>
-      </article>
+          </div>
+        </article>
+      </a>
   <% end %>
   <div class="pagination-wrapper">
     <nav class="pagination" role="pagination">

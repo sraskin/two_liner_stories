@@ -12,28 +12,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <!-- shortcut icon, Web site icon, tab icon or bookmark icon -->
-  <link rel="shortcut icon" href="assets/img/favicon.ico"/>
+  <link rel="shortcut icon" href="/assets/img/favicon.ico"/>
 
-  <link rel="stylesheet" type="text/css" href="assets/css/normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css"/>
   <!-- Sidr JS styles -->
-  <link rel="stylesheet" type="text/css" href="assets/css/jquery.sidr.light.css"/>
+  <link rel="stylesheet" type="text/css" href="/assets/css/jquery.sidr.light.css"/>
   <!-- main styles -->
-  <link rel="stylesheet" type="text/css" href="assets/css/screen.css"/>
+  <link rel="stylesheet" type="text/css" href="/assets/css/screen.css"/>
 
   <meta name="generator" content="Ghost 0.5"/>
-  <link rel="alternate" type="application/rss+xml" title="SuperB" href="rss/index.html">
-  <link rel="canonical" href="index.html"/>
 </head>
 <body class="home-template">
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
 <header id="site-head">
   <div class="shadow">
     <div class="header__inner">
       <div class="vertical">
         <div id="site-head-content" class="inner">
-
-          <!--<a id="blog-logo" href="index.html">-->
-          <!--<img src="content/images/2014/Jan/superb_logo.svg" alt="Blog Logo"/>-->
-          <!--</a>-->
+          <% if current_page?(root_path) %>
+              <a></a>
+          <% else
+               current_page?(story_path) %>
+              <h2 class="post-title">
+                <a id="blog-logo" href="/"><img src="/assets/img/home.png" alt="Home Logo"/></a>
+              </h2>
+          <% end %>
           <h1 class="blog-title"><%= link_to "Award Winning Two Lining Story", root_path %></h1>
           <h2 class="blog-description">Big stories told in two little sentences.</h2>
 
@@ -52,6 +64,9 @@
 <%= yield %>
 
 <footer class="site-footer">
+  <div class="to_top">
+    <a href="#"><i class="fa fa-arrow-circle-up"></i></a>
+  </div>
   <div class="inner">
     <section class="copyright">copyright &copy; <%= Date.today.year %></section>
   </div>
@@ -60,11 +75,11 @@
 <script src="public/jquery.min0805.js?v=d88ecd30d0"></script>
 
 <!-- Include jQuery -->
-<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.js"></script>
 <!-- Include the Sidr JS -->
-<script type="text/javascript" src="assets/js/jquery.sidr.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.sidr.min.js"></script>
 <!-- Include custom JS -->
-<script type="text/javascript" src="assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/index.js"></script>
 <script>
   (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
