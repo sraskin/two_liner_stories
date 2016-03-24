@@ -36,10 +36,10 @@
       <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8930308">
-              <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.4667747">
+              <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
               <folding>
-                <marker date="1458780634272" expanded="true" signature="1203:9953" placeholder="..." />
+                <marker date="1458781229376" expanded="true" signature="1197:9947" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -845,10 +845,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8930308">
-          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.4667747">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
           <folding>
-            <marker date="1458780634272" expanded="true" signature="1203:9953" placeholder="..." />
+            <marker date="1458781229376" expanded="true" signature="1197:9947" placeholder="..." />
           </folding>
         </state>
       </provider>
